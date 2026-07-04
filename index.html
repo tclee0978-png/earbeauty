@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>煥然一新韓式耳顏管理｜從耳穴開始，讓臉與身體煥然一新</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,500&family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#FAF6EF; --cream:#FFFDF9; --paper:#FFFFFF;
+  --coffee:#8C6F5C; --coffee-deep:#5C4433;
+  --gold:#C9A66B; --gold-soft:#EAD9B8; --gold-deep:#A9824C;
+  --ink:#3B2A1E; --muted:#8A7A6C; --line:#EFE3D0;
+  --shadow:0 20px 50px -22px rgba(92,68,51,.28);
+  --outer:#EFE7D8;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;background:var(--outer);color:var(--ink);
+  font-family:'Noto Sans TC',sans-serif;font-weight:300;line-height:1.85;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:'Noto Serif TC',serif;margin:0;color:var(--coffee-deep);font-weight:600;letter-spacing:.02em;}
+p{margin:0;}
+a{color:inherit;text-decoration:none;}
+.page{max-width:640px;margin:0 auto;background:var(--ivory);position:relative;padding-bottom:110px;}
+.wrap{padding:0 26px;}
+.en{font-family:'Cormorant Garamond',serif;}
+.eyebrow{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);
+  display:inline-flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--gold);}
+
+/* divider ornament between sections */
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;padding:0 26px;margin:0;}
+.divider .ln{flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold-soft),transparent);}
+.divider .dot{width:6px;height:6px;border-radius:50%;background:var(--gold);transform:rotate(45deg);}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:16px 30px;font-size:14px;letter-spacing:.08em;border-radius:999px;
+  cursor:pointer;border:1px solid transparent;transition:transform .3s ease,box-shadow .3s ease;
+  font-family:'Noto Sans TC',sans-serif;
+}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold-deep));color:#fff;box-shadow:0 16px 30px -10px rgba(169,130,76,.55);}
+.btn-gold:hover{transform:translateY(-2px);}
+.btn-outline{border-color:var(--coffee-deep);color:var(--coffee-deep);background:transparent;}
+.btn-block{width:100%;}
+
+/* ---------- HERO ---------- */
+.hero{
+  position:relative;padding:56px 0 46px;text-align:center;overflow:hidden;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(201,166,107,.16), transparent 45%),
+    radial-gradient(circle at 85% 30%, rgba(201,166,107,.14), transparent 40%),
+    linear-gradient(180deg,#FFFDF9,var(--ivory));
+}
+.brandmark{display:inline-flex;align-items:center;gap:8px;margin-bottom:26px;}
+.brandmark .ring{width:34px;height:34px;border-radius:50%;border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;}
+.brandmark span{font-family:'Noto Serif TC',serif;font-size:14px;letter-spacing:.18em;color:var(--coffee-deep);}
+.tagrow{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:22px;}
+.tagrow span{
+  font-size:11.5px;letter-spacing:.04em;color:var(--coffee-deep);
+  border:1px solid var(--gold-soft);background:#fff;padding:7px 14px;border-radius:999px;
+}
+.hero h1{font-size:clamp(28px,7.6vw,38px);line-height:1.5;margin:22px 0 16px;}
+.hero h1 em{font-style:normal;color:var(--gold-deep);}
+.hero .sub{font-size:14.5px;color:var(--muted);max-width:420px;margin:0 auto 30px;line-height:1.95;}
+.hero .sub b{color:var(--coffee-deep);font-weight:500;}
+.hero-visual{
+  margin:0 auto 30px;width:180px;height:180px;position:relative;
+}
+.hero-visual svg{width:100%;height:100%;filter:drop-shadow(0 18px 26px rgba(92,68,51,.18));}
+
+/* ---------- SECTION GENERIC ---------- */
+section{padding:58px 0;}
+section.alt{background:#F4EBDD;}
+.sec-head{text-align:center;margin-bottom:36px;}
+.sec-head h2{font-size:clamp(22px,6vw,28px);margin-top:12px;line-height:1.5;}
+.sec-head p{color:var(--muted);font-size:13.5px;margin-top:12px;}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:none;}
+
+/* ---------- 痛點 ---------- */
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.pain-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:18px;
+  padding:20px 14px;text-align:center;box-shadow:var(--shadow);
+}
+.pain-card .ic{width:38px;height:38px;margin:0 auto 12px;}
+.pain-card p{font-size:13px;color:var(--coffee-deep);font-weight:500;line-height:1.6;}
+
+/* ---------- 三大療程 ---------- */
+.treat-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:24px;
+  padding:30px 26px;box-shadow:var(--shadow);margin-bottom:22px;position:relative;overflow:hidden;
+}
+.treat-card:last-child{margin-bottom:0;}
+.treat-top{display:flex;align-items:center;gap:14px;margin-bottom:16px;}
+.treat-ic{
+  width:52px;height:52px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(150deg,var(--gold-soft),#fff);
+  border:1px solid var(--gold-soft);display:flex;align-items:center;justify-content:center;
+}
+.treat-top .tag{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-deep);font-size:13px;display:block;}
+.treat-top h3{font-size:19px;margin-top:2px;}
+.treat-card p.desc{font-size:13.5px;color:var(--muted);margin-bottom:18px;line-height:1.9;}
+.treat-list{list-style:none;margin:0 0 18px;padding:0;}
+.treat-list li{
+  display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--coffee-deep);
+  padding:8px 0;border-top:1px dashed var(--line);
+}
+.treat-list li:first-child{border-top:none;}
+.treat-list li .chk{color:var(--gold-deep);flex-shrink:0;}
+.treat-for{font-size:12.5px;color:var(--muted);background:var(--ivory);border-radius:12px;padding:10px 14px;}
+.treat-for b{color:var(--coffee-deep);font-weight:500;}
+
+/* ---------- 耳穴原理 ---------- */
+.ear-wrap{display:flex;justify-content:center;margin-bottom:30px;}
+.ear-diagram{width:230px;height:250px;position:relative;}
+.ear-diagram svg{width:100%;height:100%;}
+.ear-diagram .pt{cursor:pointer;transition:transform .25s ease;transform-origin:center;}
+.ear-diagram .pt:hover{transform:scale(1.4);}
+.ear-tip{position:absolute;background:var(--coffee-deep);color:#fff;font-size:10.5px;padding:5px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transform:translate(-50%,-120%);transition:opacity .2s ease;z-index:5;}
+.ear-tip.show{opacity:1;}
+.principle-list{list-style:none;margin:0;padding:0;}
+.principle-list li{
+  display:flex;gap:12px;padding:14px 0;border-top:1px solid var(--line);
+  font-size:13.5px;color:var(--muted);line-height:1.85;
+}
+.principle-list li:first-child{border-top:none;}
+.principle-list .num{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold-deep);font-size:20px;flex-shrink:0;width:26px;}
+.principle-list b{color:var(--coffee-deep);font-weight:500;display:block;margin-bottom:2px;font-family:'Noto Serif TC',serif;}
+
+/* ---------- 前後對比 ---------- */
+.compare-wrap{display:flex;flex-direction:column;gap:14px;}
+.compare-card{border-radius:20px;padding:24px 22px;box-shadow:var(--shadow);}
+.compare-card.before{background:#F1EAE1;border:1px solid var(--line);}
+.compare-card.after{background:linear-gradient(150deg,#FFF8E9,#FDF0D8);border:1px solid var(--gold-soft);}
+.compare-label{display:flex;align-items:center;gap:8px;margin-bottom:16px;}
+.compare-label .badge{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:12px;
+  padding:4px 12px;border-radius:999px;background:#fff;color:var(--muted);border:1px solid var(--line);
+}
+.compare-card.after .badge{color:var(--gold-deep);border-color:var(--gold-soft);}
+.compare-label h4{font-size:16px;}
+.compare-card ul{list-style:none;margin:0;padding:0;}
+.compare-card li{font-size:13.5px;color:var(--muted);padding:7px 0;display:flex;gap:8px;}
+.compare-card.after li{color:var(--coffee-deep);}
+.compare-arrow{display:flex;justify-content:center;margin:2px 0;}
+
+/* ---------- 流程 ---------- */
+.flow-list{position:relative;padding-left:44px;}
+.flow-list::before{content:"";position:absolute;left:17px;top:6px;bottom:6px;width:1px;background:var(--gold-soft);}
+.flow-item{position:relative;padding-bottom:28px;}
+.flow-item:last-child{padding-bottom:0;}
+.flow-item .node{
+  position:absolute;left:-44px;top:0;width:36px;height:36px;border-radius:50%;
+  background:var(--paper);border:1px solid var(--gold);display:flex;align-items:center;justify-content:center;
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-size:14px;color:var(--gold-deep);box-shadow:var(--shadow);
+}
+.flow-item h4{font-size:15px;margin-bottom:4px;}
+.flow-item p{font-size:13px;color:var(--muted);}
+
+/* ---------- 價格 ---------- */
+.price-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:22px;
+  padding:26px 24px;box-shadow:var(--shadow);margin-bottom:16px;position:relative;
+}
+.price-card.hot{
+  background:linear-gradient(160deg,#3B2A1E,#5C4433);color:#fff;border-color:transparent;
+}
+.price-card.hot .price-tier,.price-card.hot .price-note{color:#E7D5B8;}
+.price-card.hot h3{color:#fff;}
+.price-badge{
+  position:absolute;top:-11px;right:20px;background:var(--gold);color:#fff;font-size:11px;
+  padding:5px 14px;border-radius:999px;letter-spacing:.05em;box-shadow:0 8px 18px rgba(169,130,76,.4);
+}
+.price-tier{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:13px;color:var(--gold-deep);}
+.price-card h3{font-size:19px;margin:6px 0 12px;}
+.price-num{font-family:'Cormorant Garamond',serif;font-size:38px;color:var(--gold-deep);margin-bottom:10px;}
+.price-card.hot .price-num{color:#F3D9A8;}
+.price-note{font-size:13px;color:var(--muted);}
+
+/* ---------- 見證 ---------- */
+.review-card{
+  background:var(--paper);border:1px solid var(--line);border-radius:20px;
+  padding:24px;box-shadow:var(--shadow);margin-bottom:14px;
+}
+.review-top{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+.avatar{
+  width:42px;height:42px;border-radius:50%;flex-shrink:0;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,var(--gold-soft),#fff);border:1px solid var(--gold-soft);
+  display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;color:var(--gold-deep);
+}
+.avatar img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;}
+.review-name{font-size:13.5px;color:var(--coffee-deep);font-weight:500;}
+.review-meta{font-size:11.5px;color:var(--muted);}
+.review-card p.quote{font-size:13.5px;color:var(--muted);line-height:1.9;font-style:normal;}
+.stars{color:var(--gold);font-size:13px;margin-bottom:6px;letter-spacing:2px;}
+
+/* ---------- FAQ ---------- */
+.faq-item{border-top:1px solid var(--line);}
+.faq-item:last-child{border-bottom:1px solid var(--line);}
+.faq-q{padding:18px 2px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;font-family:'Noto Serif TC',serif;font-size:14.5px;color:var(--coffee-deep);gap:14px;}
+.faq-q .plus{font-size:18px;color:var(--gold-deep);transition:transform .3s ease;flex-shrink:0;}
+.faq-item.open .plus{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease;}
+.faq-a-in{padding:0 2px 18px;font-size:13px;color:var(--muted);line-height:1.85;}
+
+/* ---------- CTA ---------- */
+.cta-section{
+  background:linear-gradient(165deg,#3B2A1E,#5C4433);color:#F5EAD6;text-align:center;padding:60px 0 50px;
+}
+.cta-section .eyebrow{color:var(--gold-soft);}
+.cta-section .eyebrow::before{background:var(--gold-soft);}
+.cta-section h2{color:#fff;font-size:clamp(22px,6vw,28px);margin:14px 0 14px;}
+.cta-section p{color:#D9C6AC;font-size:13.5px;margin-bottom:26px;line-height:1.9;}
+.info-card{
+  background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);border-radius:18px;
+  padding:22px;text-align:left;margin-top:26px;
+}
+.info-card div{display:flex;justify-content:space-between;gap:14px;padding:11px 0;border-bottom:1px dashed rgba(255,255,255,.14);font-size:13px;}
+.info-card div:last-child{border-bottom:none;}
+.info-card span{color:#B8A387;flex-shrink:0;}
+.info-card b{color:#F3D9A8;font-weight:500;text-align:right;font-family:'Noto Serif TC',serif;}
+
+footer{text-align:center;padding:30px 26px 130px;font-size:11px;color:var(--muted);}
+
+/* ---------- 底部固定 CTA ---------- */
+.fixed-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;
+  max-width:640px;margin:0 auto;
+  background:rgba(255,253,249,.92);backdrop-filter:blur(14px);
+  border-top:1px solid var(--line);
+  padding:12px 20px;display:flex;gap:10px;align-items:center;
+  box-shadow:0 -12px 30px rgba(92,68,51,.1);
+}
+.fixed-cta .info{flex:1;font-size:11.5px;color:var(--muted);line-height:1.5;}
+.fixed-cta .info b{display:block;color:var(--coffee-deep);font-size:13px;font-family:'Noto Serif TC',serif;}
+.fixed-cta .btn{padding:13px 22px;font-size:13px;white-space:nowrap;}
+
+/* ---------- 桌機：poster 外框感 ---------- */
+@media(min-width:701px){
+  body{padding:40px 0;}
+  .page{border-radius:26px;box-shadow:0 40px 100px -30px rgba(59,42,30,.35);overflow:hidden;}
+  .fixed-cta{border-radius:0 0 26px 26px;}
+}
+
+/* ---------- 可編輯圖片區塊 ---------- */
+.img-slot{position:relative;}
+.img-slot img.uploaded-img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;border-radius:inherit;z-index:2;}
+.slot-controls{position:absolute;inset:0;display:none;align-items:center;justify-content:center;gap:8px;background:rgba(59,42,30,.55);border-radius:inherit;opacity:0;transition:opacity .2s ease;z-index:6;}
+body.editing .img-slot .slot-controls{display:flex;}
+.img-slot:hover .slot-controls,.img-slot .slot-controls:focus-within{opacity:1;}
+body.editing .img-slot .slot-controls{opacity:.94;}
+.slot-controls button{background:#fff;color:var(--coffee-deep);border:none;padding:8px 12px;border-radius:999px;font-size:10.5px;cursor:pointer;display:inline-flex;align-items:center;gap:4px;font-family:'Noto Sans TC',sans-serif;}
+.slot-controls button.remove-btn{display:none;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.7);}
+.img-slot.has-image .slot-controls button.remove-btn{display:inline-flex;}
+
+/* ---------- 編輯狀態 ---------- */
+body.editing [data-ek]{outline:1px dashed var(--gold);outline-offset:3px;cursor:text;border-radius:4px;}
+body.editing [data-ek]:focus{outline:2px solid var(--coffee-deep);background:rgba(201,166,107,.1);}
+
+/* ---------- 鎖頭與編輯工具列 ---------- */
+.lock-btn{
+  position:fixed;right:16px;bottom:96px;z-index:120;width:48px;height:48px;border-radius:50%;
+  background:var(--coffee-deep);color:#fff;border:none;cursor:pointer;font-size:18px;
+  display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px rgba(59,42,30,.35);
+}
+.lock-btn.hide{display:none;}
+.modal-mask{position:fixed;inset:0;background:rgba(59,42,30,.55);backdrop-filter:blur(3px);z-index:300;display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-mask.show{display:flex;}
+.modal-box{background:var(--paper);border:1px solid var(--line);border-radius:24px;box-shadow:var(--shadow);padding:32px 28px;max-width:320px;width:100%;text-align:center;}
+.modal-box h3{font-size:18px;margin-bottom:8px;}
+.modal-box p{font-size:12.5px;color:var(--muted);margin-bottom:18px;}
+.modal-box input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:12px;font-size:16px;letter-spacing:.1em;text-align:center;margin-bottom:12px;background:var(--ivory);color:var(--ink);font-family:'Noto Sans TC',sans-serif;}
+.modal-actions{display:flex;gap:10px;}
+.modal-actions .btn{flex:1;padding:11px;font-size:12.5px;}
+.modal-error{color:#B5473A;font-size:12px;margin-bottom:10px;display:none;}
+.modal-error.show{display:block;}
+.modal-box.shake{animation:shake .4s ease;}
+@keyframes shake{0%,100%{transform:translateX(0);}25%{transform:translateX(-8px);}75%{transform:translateX(8px);}}
+.editor-bar{
+  position:fixed;right:16px;bottom:96px;z-index:120;background:var(--coffee-deep);color:#fff;border-radius:999px;
+  padding:7px;display:none;align-items:center;gap:6px;box-shadow:0 14px 30px rgba(59,42,30,.35);
+}
+.editor-bar.show{display:flex;}
+.ebtn{background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.25);padding:8px 13px;border-radius:999px;cursor:pointer;font-size:11px;display:inline-flex;align-items:center;gap:5px;font-family:'Noto Sans TC',sans-serif;white-space:nowrap;}
+.ebtn-gold{background:var(--gold);border-color:var(--gold);}
+.save-flag{position:fixed;right:16px;bottom:150px;z-index:120;font-size:11px;color:#fff;background:var(--coffee-deep);padding:7px 14px;border-radius:999px;opacity:0;transition:opacity .3s ease;max-width:220px;text-align:center;}
+.save-flag.show{opacity:1;}
+</style>
+</head>
+<body>
+<div class="page" id="pageRoot">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="brandmark">
+      <span class="ring"><svg width="16" height="16" viewBox="0 0 26 26"><path d="M13 2c-4.5 0-7.5 3.6-7.5 8 0 2.6 1.1 4 2.1 5.3 1 1.2 1.7 2.1 1.7 3.9 0 1.6 1.2 2.8 2.8 2.8 1.7 0 2.9-1 2.9-2.7 0-.9-.4-1.4-.9-2-.5-.6-1.1-1.3-1.1-2.5 0-1.6 1.3-2.3 2.6-3 1.5-.8 3-1.7 3-4 0-3.2-2.6-5.8-5.6-5.8z" fill="none" stroke="#A9824C" stroke-width="1.3"/></svg></span>
+      <span data-ek="brand-name">煥然一新韓式耳顏管理</span>
+    </div>
+    <h1 data-ek="hero-title">從耳穴開始，<br>讓臉與身體<em>煥然一新</em></h1>
+    <div class="hero-visual">
+      <svg viewBox="0 0 200 210" fill="none">
+        <circle cx="100" cy="105" r="98" fill="url(#g1)"/>
+        <defs><radialGradient id="g1" cx="35%" cy="30%" r="75%"><stop offset="0%" stop-color="#FFFDF9"/><stop offset="100%" stop-color="#F3E6CC"/></radialGradient></defs>
+        <path d="M108 46c-30 0-52 24-52 55 0 20 8 31 16 39 7 8 12 14 12 25 0 12 9 20 20 20 13 0 21-8 21-19 0-7-3-11-7-16-4-5-7-9-7-18 0-12 10-17 19-22 12-6 23-14 23-30 0-22-19-34-45-34z"
+              stroke="#5C4433" stroke-width="1.6" fill="#FFFDF9"/>
+        <path d="M90 70c-18 6-28 20-28 36 0 12 5 19 11 27" stroke="#C9A66B" stroke-width="1.2" opacity=".6"/>
+        <circle cx="118" cy="90" r="3.4" fill="#C9A66B"/>
+        <circle cx="95" cy="115" r="3.4" fill="#A9824C"/>
+        <circle cx="128" cy="130" r="3.4" fill="#5C4433"/>
+      </svg>
+    </div>
+    <p class="sub" data-ek="hero-sub"><b>韓式耳穴美學 × 專利蒸足 × 臉部撥筋</b><br>打造由內而外的輕盈感、拉提感與放鬆感</p>
+    <a class="btn btn-gold" href="#contact" data-ek="hero-cta">立即預約體驗</a>
+    <div class="tagrow">
+      <span data-ek="tag1">韓式耳穴</span><span data-ek="tag2">蒸足循環</span><span data-ek="tag3">小臉撥筋</span>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 痛點 ============ -->
+<section id="pain">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">CHECK YOURSELF</span>
+      <h2 data-ek="pain-title">你是不是也有這些困擾？</h2>
+    </div>
+    <div class="pain-grid reveal">
+      <div class="pain-card"><svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M6 14c1-6 5-9 6-9s5 3 6 9-4 6-6 6-7 0-6-6z" stroke="#A9824C" stroke-width="1.3"/></svg><p data-ek="pain1">臉部浮腫</p></div>
+      <div class="pain-card"><svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M6 6c0 6 3 8 3 12M18 6c0 6-3 8-3 12" stroke="#A9824C" stroke-width="1.3" stroke-linecap="round"/></svg><p data-ek="pain2">肩頸緊繃</p></div>
+      <div class="pain-card"><svg class="ic" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="12" rx="8" ry="5" stroke="#A9824C" stroke-width="1.3"/><circle cx="12" cy="12" r="2" fill="#A9824C"/></svg><p data-ek="pain3">眼周疲勞</p></div>
+      <div class="pain-card"><svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M4 15c3-8 13-8 16 0" stroke="#A9824C" stroke-width="1.3" stroke-linecap="round"/><path d="M4 15c3 3 13 3 16 0" stroke="#A9824C" stroke-width="1.3" stroke-linecap="round" opacity=".5"/></svg><p data-ek="pain4">睡不好</p></div>
+      <div class="pain-card"><svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M12 3v3M12 18v3M4 12h3M17 12h3M6 6l2 2M16 16l2 2M6 18l2-2M16 8l2-2" stroke="#A9824C" stroke-width="1.3" stroke-linecap="round"/></svg><p data-ek="pain5">手腳冰冷</p></div>
+      <div class="pain-card"><svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M5 19h14M8 19v-6h8v6M9 13V7a3 3 0 0 1 6 0v6" stroke="#A9824C" stroke-width="1.3"/></svg><p data-ek="pain6">久坐循環差</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 三大核心療程 ============ -->
+<section class="alt" id="treatments">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">SIGNATURE CARE</span>
+      <h2 data-ek="treat-title">三大核心療程</h2>
+      <p data-ek="treat-lead">各自獨立，也能銜接成一套完整的身心保養流程</p>
+    </div>
+
+    <div class="treat-card reveal">
+      <div class="treat-top">
+        <div class="treat-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4 0-7 3.2-7 7.2 0 2.4 1 3.7 2 4.9.9 1.1 1.5 1.9 1.5 3.2 0 1.5 1.1 2.7 2.6 2.7 1.6 0 2.7-1 2.7-2.6 0-.9-.4-1.4-.8-1.9-.5-.6-1-1.2-1-2.3 0-1.5 1.2-2.1 2.4-2.7 1.4-.7 2.8-1.5 2.8-3.6C19 5.8 16.3 3 12 3z" stroke="#A9824C" stroke-width="1.3"/></svg></div>
+        <div><span class="tag">A</span><h3 data-ek="tA-title">韓式耳穴美學</h3></div>
+      </div>
+      <p class="desc" data-ek="tA-desc">透過非侵入式耳穴貼球，針對耳廓上對應全身的反射區進行精準刺激，是整套療程的核心定位技術。</p>
+      <ul class="treat-list">
+        <li><span class="chk">✓</span><span data-ek="tA-b1">非侵入、不動刀，舒適度高</span></li>
+        <li><span class="chk">✓</span><span data-ek="tA-b2">主打 V 臉、眼周與浮腫感調理</span></li>
+        <li><span class="chk">✓</span><span data-ek="tA-b3">貼敷後可依指示居家加強</span></li>
+      </ul>
+      <div class="treat-for"><b>適合對象：</b><span data-ek="tA-for">想要小臉感、精緻保養感的族群</span></div>
+    </div>
+
+    <div class="treat-card reveal">
+      <div class="treat-top">
+        <div class="treat-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 21c4-3 6-6 6-9a6 6 0 0 0-12 0c0 3 2 6 6 9z" stroke="#A9824C" stroke-width="1.3"/><path d="M9 12c0-2 1-3 3-4" stroke="#A9824C" stroke-width="1.1" opacity=".6"/></svg></div>
+        <div><span class="tag">B</span><h3 data-ek="tB-title">專利能量礦石蒸足</h3></div>
+      </div>
+      <p class="desc" data-ek="tB-desc">以熱能、草本與足底反射概念打造的深層放鬆流程，從足底開始由下而上啟動身體循環。</p>
+      <ul class="treat-list">
+        <li><span class="chk">✓</span><span data-ek="tB-b1">由下而上啟動身體暖感</span></li>
+        <li><span class="chk">✓</span><span data-ek="tB-b2">主打輕盈、舒緩與循環感</span></li>
+        <li><span class="chk">✓</span><span data-ek="tB-b3">可作為耳穴與撥筋前的暖身</span></li>
+      </ul>
+      <div class="treat-for"><b>適合對象：</b><span data-ek="tB-for">久坐、冷氣房、手腳冰冷族群</span></div>
+    </div>
+
+    <div class="treat-card reveal">
+      <div class="treat-top">
+        <div class="treat-ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M4 12c2-4 4 4 6 0s4 4 6 0 4 4 4 0" stroke="#A9824C" stroke-width="1.3" stroke-linecap="round"/></svg></div>
+        <div><span class="tag">C</span><h3 data-ek="tC-title">臉部撥筋／眼部撥筋</h3></div>
+      </div>
+      <p class="desc" data-ek="tC-desc">順著臉部肌肉與筋膜走向，針對咀嚼肌、下顎線與眼周疲態做細緻放鬆，主打自然物理調理。</p>
+      <ul class="treat-list">
+        <li><span class="chk">✓</span><span data-ek="tC-b1">針對下顎線與咀嚼肌緊繃</span></li>
+        <li><span class="chk">✓</span><span data-ek="tC-b2">改善長時間用眼的疲勞感</span></li>
+        <li><span class="chk">✓</span><span data-ek="tC-b3">純物理調理，不打針不醫美</span></li>
+      </ul>
+      <div class="treat-for"><b>適合對象：</b><span data-ek="tC-for">3C 用眼過度、臉部緊繃浮腫族群</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 耳穴原理 ============ -->
+<section id="theory">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">EAR REFLEX THEORY</span>
+      <h2 data-ek="theory-title">耳朵，是身體<br>攤開的地圖</h2>
+    </div>
+    <div class="ear-wrap reveal">
+      <div class="ear-diagram" id="earDiagram">
+        <svg viewBox="0 0 230 250" fill="none">
+          <path d="M125 20c-46 0-80 36-80 82 0 28 12 43 23 56 10 12 17 21 17 36 0 17 12 29 29 29 19 0 30-11 30-28 0-10-4-16-9-22-6-7-11-14-11-25 0-17 14-24 27-31 17-9 33-19 33-42 0-32-27-55-59-55z"
+                stroke="#5C4433" stroke-width="1.6" fill="#FFFDF9"/>
+          <path d="M100 52c-25 8-38 29-38 52 0 17 7 26 15 36" stroke="#C9A66B" stroke-width="1.2" opacity=".55"/>
+          <path d="M130 48c22 4 37 19 37 39 0 18-12 26-24 34-10 6-18 12-18 24" stroke="#C9A66B" stroke-width="1.2" opacity=".55"/>
+          <g>
+            <circle class="pt" data-label="TMJ 顳顎關節" cx="168" cy="118" r="4" fill="#A9824C"/>
+            <circle class="pt" data-label="腎．水分代謝" cx="122" cy="150" r="4" fill="#A9824C"/>
+            <circle class="pt" data-label="肩頸．對耳輪" cx="155" cy="75" r="4" fill="#5C4433"/>
+            <circle class="pt" data-label="眼周．視神經" cx="98" cy="98" r="4" fill="#C9A66B"/>
+            <circle class="pt" data-label="神門．安定情緒" cx="142" cy="170" r="4" fill="#A9824C"/>
+          </g>
+        </svg>
+        <div class="ear-tip" id="earTip"></div>
+      </div>
+    </div>
+    <ul class="principle-list reveal">
+      <li><span class="num">01</span><div><b data-ek="prin1-b">全身反射地圖</b><span data-ek="prin1-p">耳廓上精密分佈著對應全身臟腑、骨骼與神經的反射區，是身體狀態的縮影。</span></div></li>
+      <li><span class="num">02</span><div><b data-ek="prin2-b">非侵入式刺激</b><span data-ek="prin2-p">透過獨家能量貼球輕觸對應穴位，不用針、不動刀，作用溫和且可長時間配戴。</span></div></li>
+      <li><span class="num">03</span><div><b data-ek="prin3-b">放鬆・循環・拉提</b><span data-ek="prin3-p">規律施作有助於放鬆肌肉張力、促進局部循環，並作為日常臉部線條保養的一環。</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 前後對比 ============ -->
+<section class="alt" id="compare">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">THE DIFFERENCE</span>
+      <h2 data-ek="compare-title">一次體驗，<br>感受不一樣的自己</h2>
+    </div>
+    <div class="compare-wrap reveal">
+      <div class="compare-card before">
+        <div class="compare-label"><span class="badge">BEFORE</span><h4 data-ek="before-h">施作前</h4></div>
+        <ul>
+          <li data-ek="before1">－ 臉看起來比較垮</li>
+          <li data-ek="before2">－ 肩頸沉重</li>
+          <li data-ek="before3">－ 眼睛疲勞</li>
+          <li data-ek="before4">－ 身體循環差</li>
+        </ul>
+      </div>
+      <div class="compare-arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke="#C9A66B" stroke-width="1.6"/></svg></div>
+      <div class="compare-card after">
+        <div class="compare-label"><span class="badge">AFTER</span><h4 data-ek="after-h">施作後</h4></div>
+        <ul>
+          <li data-ek="after1">＋ 臉部線條更清爽</li>
+          <li data-ek="after2">＋ 肩頸更放鬆</li>
+          <li data-ek="after3">＋ 眼周壓力減輕</li>
+          <li data-ek="after4">＋ 身體變輕盈</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 療程流程 ============ -->
+<section id="flow">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">THE JOURNEY</span>
+      <h2 data-ek="flow-title">療程流程</h2>
+    </div>
+    <div class="flow-list reveal">
+      <div class="flow-item"><span class="node">01</span><h4 data-ek="f1-h">體態與臉部評估</h4><p data-ek="f1-p">了解肩頸、臉部浮腫與循環現況。</p></div>
+      <div class="flow-item"><span class="node">02</span><h4 data-ek="f2-h">耳穴反射區判斷</h4><p data-ek="f2-p">依耳廓反射區安排貼球與按壓重點。</p></div>
+      <div class="flow-item"><span class="node">03</span><h4 data-ek="f3-h">蒸足循環暖身</h4><p data-ek="f3-p">以溫熱感讓身體先放鬆，提升舒適度。</p></div>
+      <div class="flow-item"><span class="node">04</span><h4 data-ek="f4-h">臉部／眼部撥筋</h4><p data-ek="f4-p">針對臉部與眼周做細緻放鬆整理。</p></div>
+      <div class="flow-item"><span class="node">05</span><h4 data-ek="f5-h">韓式耳穴貼球</h4><p data-ek="f5-p">完成當次施作的耳穴定位與貼敷。</p></div>
+      <div class="flow-item"><span class="node">06</span><h4 data-ek="f6-h">居家按壓教學</h4><p data-ek="f6-p">教你回家後如何自行加強保養。</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 價格方案 ============ -->
+<section class="alt" id="pricing">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">TRIAL MENU</span>
+      <h2 data-ek="pricing-title">價格方案</h2>
+    </div>
+    <div class="reveal">
+      <div class="price-card">
+        <div class="price-tier">TRIAL</div>
+        <h3 data-ek="p1-title">韓式耳穴體驗價</h3>
+        <div class="price-num">$<span data-ek="p1-price">800</span></div>
+        <p class="price-note" data-ek="p1-note">適合第一次認識耳穴美學的你，先感受非侵入式的舒適調理。</p>
+      </div>
+      <div class="price-card hot">
+        <span class="price-badge" data-ek="p2-badge">人氣推薦</span>
+        <div class="price-tier">SIGNATURE</div>
+        <h3 data-ek="p2-title">耳穴＋蒸足＋撥筋三合一</h3>
+        <div class="price-num">$<span data-ek="p2-price">1,680</span></div>
+        <p class="price-note" data-ek="p2-note">一次體驗完整流程，最能感受由內而外的整體差異。</p>
+      </div>
+      <div class="price-card">
+        <div class="price-tier">MEMBERSHIP</div>
+        <h3 data-ek="p3-title">會員套票方案</h3>
+        <div class="price-num" data-ek="p3-price">10 堂套票</div>
+        <p class="price-note" data-ek="p3-note">請洽詢專人，依你的保養頻率規劃合適的套票內容與優惠。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ 客戶見證 ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">REAL EXPERIENCE</span>
+      <h2 data-ek="reviews-title">真實體驗分享</h2>
+      <p data-ek="reviews-lead">每個人感受不同，這是幾位客人分享的真實心得</p>
+    </div>
+    <div class="reveal">
+      <div class="review-card">
+        <div class="review-top">
+          <div class="avatar img-slot" data-ik="rev1"><span class="en">A</span>
+            <div class="slot-controls"><button type="button" class="upload-btn">📷</button><button type="button" class="remove-btn">✕</button><input type="file" accept="image/*" hidden></div>
+          </div>
+          <div><div class="review-name" data-ek="rev1-name">陳小姐</div><div class="review-meta" data-ek="rev1-meta">32歲・上班族</div></div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="quote" data-ek="rev1-quote">做完之後覺得臉部線條清爽很多，原本下班常常覺得臉很脹，現在明顯感覺舒服一些。</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="avatar img-slot" data-ik="rev2"><span class="en">B</span>
+            <div class="slot-controls"><button type="button" class="upload-btn">📷</button><button type="button" class="remove-btn">✕</button><input type="file" accept="image/*" hidden></div>
+          </div>
+          <div><div class="review-name" data-ek="rev2-name">Wendy</div><div class="review-meta" data-ek="rev2-meta">28歲・設計師</div></div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="quote" data-ek="rev2-quote">肩頸真的放鬆很多，蒸足的時候整個人都暖起來，做完當天晚上睡得比較安穩。</p>
+      </div>
+      <div class="review-card">
+        <div class="review-top">
+          <div class="avatar img-slot" data-ik="rev3"><span class="en">C</span>
+            <div class="slot-controls"><button type="button" class="upload-btn">📷</button><button type="button" class="remove-btn">✕</button><input type="file" accept="image/*" hidden></div>
+          </div>
+          <div><div class="review-name" data-ek="rev3-name">momo</div><div class="review-meta" data-ek="rev3-meta">40歲・自營業</div></div>
+        </div>
+        <div class="stars">★★★★★</div>
+        <p class="quote" data-ek="rev3-quote">睡眠品質有感覺改善，加上耳穴貼球回家還能自己按壓，覺得很划算也很方便。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><span class="ln"></span><span class="dot"></span><span class="ln"></span></div>
+
+<!-- ============ FAQ ============ -->
+<section class="alt" id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 data-ek="faq-title">常見問題</h2>
+    </div>
+    <div class="reveal">
+      <div class="faq-item">
+        <div class="faq-q"><span data-ek="faq1-q">會痛嗎？</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-in" data-ek="faq1-a">採用非侵入式能量貼球，通常只有輕微壓感，不是針刺式疼痛，多數人接受度都很高。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-ek="faq2-q">可以維持多久？</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-in" data-ek="faq2-a">耳穴貼球一般建議配戴數天，實際天數依膚質與部位由專人建議調整。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-ek="faq3-q">跟針灸一樣嗎？</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-in" data-ek="faq3-a">不一樣。我們使用的是能量貼球而非針具，屬於非侵入式的物理刺激，不會有針扎的感覺。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-ek="faq4-q">第一次適合做哪個方案？</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-in" data-ek="faq4-a">建議先從三合一體驗方案開始，一次感受耳穴、蒸足與撥筋三種服務的差異，再決定後續保養頻率。</div></div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q"><span data-ek="faq5-q">有禁忌嗎？</span><span class="plus">+</span></div>
+        <div class="faq-a"><div class="faq-a-in" data-ek="faq5-a">若有懷孕、皮膚敏感、傷口或特殊病史，請先告知專人或諮詢醫師意見後再安排施作。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-section" id="contact">
+  <div class="wrap">
+    <span class="eyebrow">RESERVE NOW</span>
+    <h2 data-ek="cta-title">現在預約，<br>體驗韓式耳顏管理</h2>
+    <p data-ek="cta-lead">先預約體驗，讓專人依你的狀態安排合適流程。</p>
+    <a class="btn btn-gold btn-block" href="https://line.me/R/ti/p/@your-line-id" data-ek="cta-btn">LINE 立即預約</a>
+    <div class="info-card">
+      <div><span>LINE</span><b data-ek="info-line">@your-line-id</b></div>
+      <div><span>營業時間</span><b data-ek="info-hours">11:00–20:00</b></div>
+      <div><span>服務地點</span><b data-ek="info-addr">請填入地址</b></div>
+    </div>
+  </div>
+</section>
+
+<footer data-ek="footer-text">© 2026 煥然一新韓式耳顏管理．本站內容為美容保養與舒緩調理介紹，不宣稱醫療診斷或治療效果。</footer>
+
+<!-- ============ 底部固定 CTA ============ -->
+<div class="fixed-cta">
+  <div class="info"><b data-ek="fixed-title">韓式耳顏管理</b><span data-ek="fixed-sub">耳穴・蒸足・撥筋</span></div>
+  <a class="btn btn-gold" href="#contact" data-ek="fixed-btn">立即預約</a>
+</div>
+
+</div><!-- /page -->
+
+<!-- ============ 編輯鎖定系統 ============ -->
+<button class="lock-btn" id="lockBtn" title="管理者編輯">🔒</button>
+<div class="editor-bar" id="editorBar">
+  <button class="ebtn ebtn-gold" id="lockAgainBtn">🔒 鎖定</button>
+  <button class="ebtn" id="downloadBtn">⭳ 下載</button>
+  <button class="ebtn" id="resetBtn">還原</button>
+</div>
+<div class="save-flag" id="saveFlag"></div>
+<div class="modal-mask" id="modalMask">
+  <div class="modal-box" id="modalBox">
+    <h3>管理者編輯模式</h3>
+    <p>請輸入密碼以解鎖文字與圖片編輯功能</p>
+    <div class="modal-error" id="modalError">密碼錯誤，請再試一次</div>
+    <input type="password" id="pwInput" placeholder="請輸入密碼" inputmode="numeric" autocomplete="off">
+    <div class="modal-actions">
+      <button class="btn btn-outline" id="cancelBtn" type="button">取消</button>
+      <button class="btn btn-gold" id="unlockBtn" type="button">解鎖</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item=>{
+  const q=item.querySelector('.faq-q'), a=item.querySelector('.faq-a');
+  q.addEventListener('click',()=>{
+    const isOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o=>{o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+    if(!isOpen){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+  });
+});
+
+// reveal on scroll
+const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// ear diagram tooltip
+const earDiagram=document.getElementById('earDiagram'), earTip=document.getElementById('earTip');
+document.querySelectorAll('.ear-diagram .pt').forEach(pt=>{
+  const show=()=>{
+    const r=pt.getBoundingClientRect(), s=earDiagram.getBoundingClientRect();
+    earTip.textContent=pt.dataset.label;
+    earTip.style.left=(r.left-s.left+r.width/2)+'px';
+    earTip.style.top=(r.top-s.top)+'px';
+    earTip.classList.add('show');
+  };
+  const hide=()=>earTip.classList.remove('show');
+  pt.addEventListener('mouseenter',show);
+  pt.addEventListener('mouseleave',hide);
+  pt.addEventListener('touchstart',(e)=>{e.preventDefault();show();setTimeout(hide,1600);});
+});
+
+// ================= EDITING + LOCK SYSTEM =================
+(function(){
+  const PASSWORD='10311112';
+  const STORAGE_KEY='huanrenew-mobile-lp-v1';
+  let editing=false, saveTimer=null, flashTimer=null;
+  const hasStorage=typeof window.storage!=='undefined';
+
+  const lockBtn=document.getElementById('lockBtn');
+  const editorBar=document.getElementById('editorBar');
+  const lockAgainBtn=document.getElementById('lockAgainBtn');
+  const downloadBtn=document.getElementById('downloadBtn');
+  const resetBtn=document.getElementById('resetBtn');
+  const saveFlag=document.getElementById('saveFlag');
+  const modalMask=document.getElementById('modalMask');
+  const modalBox=document.getElementById('modalBox');
+  const modalError=document.getElementById('modalError');
+  const pwInput=document.getElementById('pwInput');
+  const unlockBtn=document.getElementById('unlockBtn');
+  const cancelBtn=document.getElementById('cancelBtn');
+
+  function collectState(){
+    const texts={};
+    document.querySelectorAll('[data-ek]').forEach(el=>{texts[el.dataset.ek]=el.innerHTML;});
+    const images={};
+    document.querySelectorAll('[data-ik]').forEach(el=>{const img=el.querySelector('img.uploaded-img'); if(img) images[el.dataset.ik]=img.src;});
+    return {texts,images};
+  }
+  function applyState(state){
+    if(!state) return;
+    if(state.texts) Object.entries(state.texts).forEach(([k,v])=>{const el=document.querySelector('[data-ek="'+k+'"]'); if(el) el.innerHTML=v;});
+    if(state.images) Object.entries(state.images).forEach(([k,v])=>{const slot=document.querySelector('[data-ik="'+k+'"]'); if(slot) setSlotImage(slot,v,false);});
+  }
+  function flashSaved(text){
+    saveFlag.textContent=text||'已自動儲存 ✓';
+    saveFlag.classList.add('show');
+    clearTimeout(flashTimer);
+    flashTimer=setTimeout(()=>saveFlag.classList.remove('show'),2200);
+  }
+  async function saveState(){
+    if(!hasStorage) return;
+    try{ await window.storage.set(STORAGE_KEY, JSON.stringify(collectState()), false); flashSaved(); }catch(e){}
+  }
+  function debouncedSave(){ clearTimeout(saveTimer); saveTimer=setTimeout(saveState,700); }
+  async function loadState(){
+    if(!hasStorage) return;
+    try{ const res=await window.storage.get(STORAGE_KEY,false); if(res && res.value) applyState(JSON.parse(res.value)); }catch(e){}
+  }
+  function setSlotImage(slot,src,save){
+    let img=slot.querySelector('img.uploaded-img');
+    if(src){
+      if(!img){ img=document.createElement('img'); img.className='uploaded-img'; slot.insertBefore(img, slot.querySelector('.slot-controls')); }
+      img.src=src; slot.classList.add('has-image');
+    } else { if(img) img.remove(); slot.classList.remove('has-image'); }
+    if(save!==false) debouncedSave();
+  }
+  function resizeAndSet(slot,file){
+    const reader=new FileReader();
+    reader.onload=(ev)=>{
+      const image=new Image();
+      image.onload=()=>{
+        const maxW=800, scale=Math.min(1,maxW/image.width);
+        const canvas=document.createElement('canvas');
+        canvas.width=Math.round(image.width*scale); canvas.height=Math.round(image.height*scale);
+        canvas.getContext('2d').drawImage(image,0,0,canvas.width,canvas.height);
+        setSlotImage(slot, canvas.toDataURL('image/jpeg',0.85));
+      };
+      image.src=ev.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+  document.querySelectorAll('.img-slot').forEach(slot=>{
+    const input=slot.querySelector('input[type="file"]');
+    const uploadBtn=slot.querySelector('.upload-btn');
+    const removeBtn=slot.querySelector('.remove-btn');
+    if(uploadBtn) uploadBtn.addEventListener('click',(e)=>{e.preventDefault(); input.click();});
+    if(input) input.addEventListener('change',(e)=>{const f=e.target.files[0]; if(f) resizeAndSet(slot,f);});
+    if(removeBtn) removeBtn.addEventListener('click',(e)=>{e.preventDefault(); setSlotImage(slot,null);});
+  });
+
+  function setEditing(v){
+    editing=v;
+    document.body.classList.toggle('editing',v);
+    document.querySelectorAll('[data-ek]').forEach(el=>{el.contentEditable=v;});
+    if(v){
+      lockBtn.classList.add('hide');
+      editorBar.classList.add('show');
+      flashSaved(hasStorage?'解鎖成功，可直接點文字修改':'解鎖成功，此環境無法自動儲存，請記得按「下載」保存');
+    } else {
+      lockBtn.classList.remove('hide');
+      editorBar.classList.remove('show');
+    }
+  }
+  document.addEventListener('input',(e)=>{ if(editing && e.target.closest('[data-ek]')) debouncedSave(); });
+  document.querySelectorAll('a[data-ek]').forEach(a=>a.addEventListener('click',(e)=>{ if(editing) e.preventDefault(); }));
+
+  function openModal(){ modalMask.classList.add('show'); modalError.classList.remove('show'); pwInput.value=''; setTimeout(()=>pwInput.focus(),50); }
+  function closeModal(){ modalMask.classList.remove('show'); }
+  function tryUnlock(){
+    if(pwInput.value===PASSWORD){ closeModal(); setEditing(true); }
+    else{
+      modalError.classList.add('show');
+      modalBox.classList.remove('shake'); void modalBox.offsetWidth; modalBox.classList.add('shake');
+      pwInput.value=''; pwInput.focus();
+    }
+  }
+  lockBtn.addEventListener('click', openModal);
+  cancelBtn.addEventListener('click', closeModal);
+  modalMask.addEventListener('click',(e)=>{ if(e.target===modalMask) closeModal(); });
+  unlockBtn.addEventListener('click', tryUnlock);
+  pwInput.addEventListener('keydown',(e)=>{ if(e.key==='Enter') tryUnlock(); });
+  lockAgainBtn.addEventListener('click', ()=>setEditing(false));
+
+  resetBtn.addEventListener('click', async ()=>{
+    if(!confirm('確定要清除目前的編輯與圖片，還原成預設內容嗎？')) return;
+    try{ if(hasStorage) await window.storage.delete(STORAGE_KEY,false); }catch(e){}
+    location.reload();
+  });
+
+  downloadBtn.addEventListener('click', ()=>{
+    const wasEditing=editing;
+    if(editing) setEditing(false);
+    const htmlContent='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    const blob=new Blob([htmlContent],{type:'text/html;charset=utf-8'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url; a.download='煥然一新韓式耳顏管理-長圖銷售頁.html';
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
+    setTimeout(()=>URL.revokeObjectURL(url),2000);
+    if(wasEditing) setEditing(true);
+  });
+
+  loadState();
+})();
+</script>
+</body>
+</html>
